@@ -24,5 +24,6 @@ xmrmarket/
   README.md
 
 install the required dependencies. Run the following command in your terminal:
+
   `npm install bcrypt jsonwebtoken`
   
