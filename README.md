@@ -20,5 +20,5 @@ xmrmarket/
   script.js
   server.js
   package.json
+  node_modules/
   README.md
-node_modules/
