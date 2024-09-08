@@ -1,8 +1,10 @@
-process.env.SECRET_KEY = 'your_secret_key_here';
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 mongoose.connect('mongodb://localhost/xmrmarket', { useNewUrlParser: true, useUnifiedTopology: true });
 
