@@ -1,3 +1,4 @@
+process.env.SECRET_KEY = 'your_secret_key_here';
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
