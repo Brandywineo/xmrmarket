@@ -17,7 +17,8 @@ xmrmarket/
   components/
     header.css
     footer.css
-    script.js
-  node_modules/
-    package.json
+  script.js
+  server.js
+  package.json
   README.md
+node_modules/
