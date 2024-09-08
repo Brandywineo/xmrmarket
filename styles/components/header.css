@@ -1,0 +1,13 @@
+/* styles/components/header.css */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav {
+  max-width: 800px;
+  margin: 0 auto;
+}
