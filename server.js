@@ -1,20 +1,33 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
-const authRoutes = require('./routes/auth');
-const dotenv = require('dotenv');
+const port = 3000;
 
-dotenv.config();
+// Set view engine to EJS
+app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost/xmrmarket', { useNewUrlParser: true, useUnifiedTopology: true });
+// Set up static assets folder
+app.use(express.static('public'));
 
-app.use(express.json());
-app.use('/api', authRoutes);
+// Set up body parser middleware
+app.use(express.urlencoded({ extended: true }));
 
+// Set up secret key (we'll discuss secure storage later)
+const secretKey = 'your_secret_key_here';
+
+// Authentication and authorization logic (previously implemented)
+
+// Render index page
 app.get('/', (req, res) => {
-  res.send('Welcome to XMR Market!');
+  res.render('index');
 });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+// Login route
+app.post('/login', (req, res) => {
+  // Authentication logic will go here
+  res.send('Login successful!');
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
