@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
+
+mongoose.connect('mongodb://localhost/xmrmarket', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.json());
 app.use('/api', authRoutes);
