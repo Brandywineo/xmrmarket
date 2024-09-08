@@ -26,6 +26,7 @@ xmrmarket/
 install the required dependencies. Run the following command in your terminal:
 
   `npm install bcrypt jsonwebtoken`
+  
 install the speakeasy library by running the following command in your terminal
 
   `npm install speakeasy`
